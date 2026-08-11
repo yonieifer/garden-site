@@ -10,6 +10,8 @@
     --bg-color: rgb(233, 242, 233);
     --yellow-color: rgb(226, 198, 75);
     --line:  rgb(186, 186, 186) solid 1px;
+    --change-trans: 0.3s ease;
+    --shadow-visual: 0 5px 20px rgba(0,0,0,.2)
 }
 
 body {
@@ -87,6 +89,12 @@ main {
     border-radius: 8px;
     padding: 1rem;
     margin: 0.5rem;
+    transition: box-shadow var(--change-trans), transform var(--change-trans);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-visual);
+    transform: scale(1.05);
 }
 
 .products-container {
@@ -139,6 +147,12 @@ main {
     font-size: 1rem;
     font-weight: bold;
     margin: 1rem 0;
+    transition: box-shadow var(--change-trans), transform var(--change-trans);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-visual);
 }
 
 .contact-btn {
