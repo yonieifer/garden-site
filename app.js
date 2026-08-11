@@ -3,24 +3,22 @@ import path from "path";
 
 const app = express();
 
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(import.meta.dirname))
+app.use(express.static(path.join(import.meta.dirname, "public")))
 
 app.use((req, res, next) => {
     console.log(req.method, req.url);
-    console.log(import.meta.dirname);
-    
     next();
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, "home.html"));
+    res.sendFile(path.join(import.meta.dirname, "public", "home.html"));
 });
 
-app.post("/contact", (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, "contact.html"));
-});
+// app.get("/contact", (req, res) => {
+//     res.sendFile(path.join(import.meta.dirname, "contact.html"));
+// });
 
 app.post("/register", (req, res) => {
     console.log(req.body);

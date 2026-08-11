@@ -209,6 +209,10 @@ select {
     margin: 1rem 0;
 }
 
+#tell-us {
+    height: 15vh;
+}
+
 @media(min-width: 640px) {
     header {
         display: flex;
