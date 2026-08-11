@@ -131,7 +131,7 @@ main {
 }
 
 .btn {
-    background-color: var(--green-color);
+    background: linear-gradient(90deg, var(--green-color) 0%, var(--yellow-color) 100%);
     color: white;
     padding: 1rem;
     width: 50%;
